@@ -35,3 +35,24 @@ let calculateBonus = (salary, performanceRating) =>{
 console.log("Bonus 1: $", calculateBonus(5000, "Excellent"));
 console.log("Bonus 2: $", calculateBonus(7000, "Good")); //logging the salaries with the bonus based on their performance ratings
 
+//Task 4 Subscription Pricing Model
+let calculateSubscriptionCost = function(plan, months, discount = 0){
+    let monthlyCost;
+    if (plan === "Basic"){
+        monthylCost = 10;
+    } else if (plan === "Premium"){
+        monthlyCost = 20;
+    } else if (plan === "Enterprise"){
+        monthlyCost = 50;
+    };
+
+let totalCost = monthlyCost * months;
+
+totalCost = totalCost - discount;
+
+return totalCost;
+}; // created a function to find the subscription cost based on the plan
+
+console.log(`Basic 6 Month Plan with $10 discount: $${calculateSubscriptionCost("Basic", 6, 10)}`);
+console.log(`Premium 12 Month plan with no discount: $${calculateSubscriptionCost("Premium", 12, 0)}`); // logging the different plan with and without a discount
+
