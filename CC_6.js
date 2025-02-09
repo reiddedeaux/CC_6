@@ -10,4 +10,13 @@ calculateProfit(50, 70, 200);
 console.log("Total Profit: $", calculateProfit(20, 30, 100));
 console.log("Total Profit: $", calculateProfit(50, 70, 200)); //logging the resuluts of these functions
 
+// Task 2 Sales Tax Computation
+let calculateSalesTax = function(amount, taxRate){
+    let salesTax = Math.floor(amount * taxRate);
+    return salesTax;
+
+}; //create a function to return sales tax
+console.log("Sales Tax: $", calculateSalesTax(100, .07));
+console.log("Sales Tax: $", calculateSalesTax(500, 0.1)); // logging the sales with sales tax into the console
+
 
